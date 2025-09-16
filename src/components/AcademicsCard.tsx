@@ -1,6 +1,6 @@
 export default function AcademicsCard() {
   return (
-    <div className="mt-10 mb-16 w-full md:mb-[150px] lg:mb-[200px]">
+    <div className="container mt-10 mb-16 w-full px-0 md:mb-[150px] lg:mb-[200px] lg:px-5 xl:px-0">
       <div className="mx-0 gap-6 rounded-xl border-t-2 border-l-2 border-[#262626] bg-white bg-[url('/sm-banner-abstract-design.png')] bg-[length:100px] bg-left-top bg-no-repeat shadow-[6px_6px_0px_black] md:mx-[30px] md:bg-[url('/sm-banner-abstract-design.png')] md:bg-[length:137px] lg:mx-0 lg:bg-[url('/banner-abstract-design.png')] lg:bg-[length:200px]">
         <div className="flex w-full flex-col items-center justify-between px-[30px] py-[50px] md:flex-row md:gap-[50px] md:px-[80px] md:py-[100px] lg:px-[152px] lg:py-[120px]">
           <div className="mb-5 flex flex-col items-center md:mb-0 md:flex-1 md:items-start">

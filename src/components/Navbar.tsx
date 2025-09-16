@@ -20,7 +20,7 @@ export default function Navbar() {
   return (
     <nav
       aria-label="Main navigation"
-      className="relative flex w-full items-center justify-between rounded-lg border-2 border-[#262626] bg-white"
+      className="relative container flex w-full items-center justify-between rounded-lg border-2 border-[#262626] bg-white px-0"
     >
       {/* Logo */}
       <div>
@@ -85,16 +85,28 @@ export default function Navbar() {
       <div
         className={`fixed top-0 right-0 z-50 h-full w-[80%] max-w-xs transform border-l-2 border-[#262626] bg-[#FFDECC] shadow-lg transition-transform duration-300 ease-in-out ${isOpen ? "translate-x-0" : "translate-x-full"}`}
       >
-        {/* Close Button */}
-        <Button
-          aria-label="Close menu"
-          onClick={() => setIsOpen(false)}
-          className="absolute top-4 right-4 bg-transparent text-2xl font-bold text-black"
-        >
-          ✕
-        </Button>
+        {/* Logo */}
+        <div className="flex items-center justify-between border-b-2 border-[#262626]">
+          <Image
+            src="/logo.png"
+            alt="Logo"
+            priority
+            height={100}
+            width={100}
+            className="h-[62px] w-[177px] bg-[#FF8D4D] object-contain px-5"
+          />
+          {/* Close Button */}
+          <Button
+            aria-label="Close menu"
+            onClick={() => setIsOpen(false)}
+            className="bg-transparent text-2xl font-bold text-black shadow-none"
+          >
+            ✕
+          </Button>
+        </div>
+
         {/* Links */}
-        <nav className="mt-16 flex flex-col items-start">
+        <nav className="flex flex-col items-start">
           {navLinks.map((link) => (
             <Link
               key={link.name}

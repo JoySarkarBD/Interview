@@ -30,7 +30,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${outfit.variable} ${raleway.variable} antialiased`}>
+      <body
+        className={`${outfit.variable} ${raleway.variable} px-[17px] antialiased sm:px-0`}
+      >
         <AdmissionBanner />
         <Navbar />
         {children}
