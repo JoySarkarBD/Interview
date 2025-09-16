@@ -1,15 +1,21 @@
+import AdmissionBanner from "@/components/AdmissionBanner";
+import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Outfit, Raleway } from "next/font/google";
+
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const outfit = Outfit({
   subsets: ["latin"],
+  variable: "--font-outfit",
+  display: "swap", // Control font loading behavior
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const raleway = Raleway({
   subsets: ["latin"],
+  variable: "--font-raleway",
+  display: "swap", // Control font loading behavior
 });
 
 export const metadata: Metadata = {
@@ -24,10 +30,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${outfit.variable} ${raleway.variable} antialiased`}>
+        <AdmissionBanner />
+        <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
