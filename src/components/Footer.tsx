@@ -111,9 +111,9 @@ const Footer = () => {
           {/* Link Columns */}
           {Object.entries(footerLinks).map(([title, links]) => (
             <div key={title} className="text-left lg:mx-auto">
-              <h4 className="mb-7 text-base font-medium text-gray-900 capitalize">
+              <h2 className="mb-7 text-base font-medium text-gray-900 capitalize">
                 {title}
-              </h4>
+              </h2>
               <ul className="text-sm transition-all duration-500">
                 {links.map((link, index) => (
                   <li

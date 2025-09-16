@@ -18,7 +18,10 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="relative flex w-full items-center justify-between rounded-lg border-2 border-[#262626] bg-white">
+    <nav
+      aria-label="Main navigation"
+      className="relative flex w-full items-center justify-between rounded-lg border-2 border-[#262626] bg-white"
+    >
       {/* Logo */}
       <div>
         <Image
@@ -84,6 +87,7 @@ export default function Navbar() {
       >
         {/* Close Button */}
         <Button
+          aria-label="Close menu"
           onClick={() => setIsOpen(false)}
           className="absolute top-4 right-4 bg-transparent text-2xl font-bold text-black"
         >

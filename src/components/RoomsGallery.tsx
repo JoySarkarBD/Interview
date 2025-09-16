@@ -3,6 +3,7 @@
 import SectionTitle from "@/common/SectionTitle";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { Button } from "./ui/button";
 
 const rooms = [
   {
@@ -131,7 +132,7 @@ const RoomsGallery = () => {
       <div className="container">
         <div className="mb-8 flex flex-wrap justify-center gap-2">
           {tabs.map((tab) => (
-            <button
+            <Button
               key={tab.key}
               onClick={() => setActiveTab(tab.key)}
               className={`font-outfit cursor-pointer rounded-md border-2 border-black px-6 py-2 font-semibold text-black transition ${
@@ -141,7 +142,7 @@ const RoomsGallery = () => {
               }`}
             >
               {tab.label}
-            </button>
+            </Button>
           ))}
         </div>
       </div>
@@ -176,7 +177,8 @@ const RoomsGallery = () => {
                     alt={room.title}
                     width={344}
                     height={304}
-                    className="mx-auto w-[300px] rounded-lg shadow-lg lg:w-full"
+                    sizes="(max-width: 1024px) 300px, 344px"
+                    className="mx-auto rounded-lg shadow-lg"
                   />
                 ))}
               </div>
@@ -188,9 +190,10 @@ const RoomsGallery = () => {
                     {room.title}
                   </h2>
                   <div className="flex items-center gap-4">
-                    <button
+                    <Button
+                      aria-label="Previous images"
                       onClick={() => handlePrev(room.key, room.images.length)}
-                      className="flex cursor-pointer items-center rounded-lg border border-black bg-transparent px-4 py-2 text-black hover:bg-[#e2e0df]"
+                      className="flex cursor-pointer items-center rounded-lg border border-black bg-transparent p-3.5 text-black hover:bg-[#e2e0df]"
                     >
                       <svg
                         width="30"
@@ -206,10 +209,11 @@ const RoomsGallery = () => {
                           fill="#333333"
                         />
                       </svg>
-                    </button>
-                    <button
+                    </Button>
+                    <Button
+                      aria-label="Next images"
                       onClick={() => handleNext(room.key, room.images.length)}
-                      className="flex cursor-pointer items-center rounded-lg border border-black bg-transparent px-4 py-2 text-black hover:bg-[#e2e0df]"
+                      className="flex cursor-pointer items-center rounded-lg border border-black bg-transparent p-3.5 text-black hover:bg-[#e2e0df]"
                     >
                       <svg
                         width="30"
@@ -225,7 +229,7 @@ const RoomsGallery = () => {
                           fill="#333333"
                         />
                       </svg>
-                    </button>
+                    </Button>
                   </div>
                 </div>
 
