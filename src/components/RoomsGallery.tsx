@@ -184,7 +184,7 @@ const RoomsGallery = () => {
               </div>
 
               {/* Text + Arrows */}
-              <div className="mt-24 flex w-full flex-col lg:mt-0">
+              <div className="mt-30 flex w-full flex-col sm:mt-35 lg:mt-0">
                 <div className="flex flex-col-reverse items-center justify-between gap-3 lg:flex-row">
                   <h2 className="font-raleway text-center text-[28px] font-bold md:text-[34px] lg:text-left lg:text-[40px]">
                     {room.title}
